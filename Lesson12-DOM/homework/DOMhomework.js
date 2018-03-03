@@ -77,7 +77,7 @@ function buildToDo(toDo, index) {
   {
 
   }
-
+ // toDoText.addEventListener('click', completeToDo());
   toDoShell.appendChild(toDoText);
   return toDoShell;
 }
@@ -114,7 +114,7 @@ return test;
 function displayToDos() {
   // code here
   const toDoContainer = document.getElementById('toDoContainer');
-  toDoContainer.innerHTML = ' ';
+  toDoContainer.innerHTML = ' this is only a test ';
    
     //buildToDos(toDoItems);
     let newArray = buildToDos(toDoItems);
@@ -146,7 +146,7 @@ function displayToDos() {
 function addToDo() {
   // code here
   const newTodo = document.getElementById('toDoInput');
-   
+   //console.log('this is only a test. ');
    
    toDoItems.push(new ToDo(newTodo.value));
    newTodo.value = ' ';
@@ -160,6 +160,12 @@ function addToDo() {
 */
 
 // code here
+const pushButton = document.getElementById('addButton');
+pushButton.onclick = function(){
+  //console.log('this is only a test2. ');
+  addToDo();
+};
+//addToDo();
 
 /* 
   STEP 9: Finally in this step we will define the function to run when we want to compelte a toDo, and add that function to the click event
@@ -176,8 +182,10 @@ function addToDo() {
 
 function completeToDo(event) {
   // UNCOMMENT THE NEXT LINE
-  // const index = event.target.id;
+   const index = event.target.id;
   // code here
+  //index.
+  displayToDos();
 }
 
 /* STEP 10: Make sure ALL tests pass */
